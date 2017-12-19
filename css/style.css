@@ -18,7 +18,7 @@ body {
 	margin: 0 auto;
 	max-width: 1300px;
 	width: 90%;
-	height: 100vh;
+	height: 100%;
 }
 
 a {
@@ -47,11 +47,6 @@ header {
 	line-height: 30px;
 	text-transform: uppercase;
 }
-
-
-/* .main {
-	width: 100%;
-} */
 
 .main figure {
 	margin: 50px auto 0 auto;
