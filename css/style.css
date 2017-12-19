@@ -62,7 +62,6 @@ header {
 
 .main-text h2 {
 	color: #248fc3;
-	/* margin: 20px; */
 	font-size: 45px;
 	font-family: 'Quicksand', 'Open Sans', sans-serif;
 	text-transform: uppercase;
@@ -84,11 +83,52 @@ header {
 .footer {
 	width: 100%;
 	height: auto;
-	margin: 90px auto 20px auto;
+	margin: 50px auto 20px auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	justify-content: space-between;
+	flex-direction: column;
+}
+
+.notify-form {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 60%;
+	margin-bottom: 80px;
+}
+
+.email {
+	padding: 10px;
+	text-transform: uppercase;
+	border: 1px solid rgb(36, 143, 195);
+	outline: none;
+	flex: 1 1 65%;
+	background-color: #F0F6F7;
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.email::placeholder {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.submit-btn {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	flex: 0 1 35%;
+	text-align: center;
+	padding: 10px;
+	background-color: rgb(36, 143, 195);
+	outline: none;
+	border: 1px solid rgb(36, 143, 195);
+	color: #fff;
 }
 
 .socials {
@@ -101,7 +141,7 @@ header {
 
 .socials .fa {
 	color: rgb(190, 190, 190);
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .fa:hover {
@@ -124,7 +164,7 @@ header {
 	}
 	to {
 		left: 20px;
-		transform: skew(5deg, 5deg);
+		transform: skew(5deg, 10deg);
 	}
 }
 
@@ -138,10 +178,23 @@ header {
 		align-items: center;
 		text-align: center;
 	}
+
 	.main-text h2 {
 		font-size: 40px;
 		letter-spacing: 5px;
 	}
+
+	.notify-form {
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 70%;
+		margin-bottom: 40px;
+	}
+
+	.email::placeholder {
+		text-align: center;
+	}
+
 	footer {
 		margin: 20px auto 20px auto;
 	}
