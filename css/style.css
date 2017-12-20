@@ -3,6 +3,7 @@
 *:after {
 	margin: 0;
 	padding: 0;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -27,14 +28,25 @@ a {
 
 header {
 	margin: 30px 50px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
 .navbar ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	list-style: none;
 	width: 160px;
@@ -84,14 +96,26 @@ header {
 	width: 100%;
 	height: auto;
 	margin: 50px auto 20px auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
 .notify-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 	width: 60%;
 	margin-bottom: 80px;
@@ -102,8 +126,24 @@ header {
 	text-transform: uppercase;
 	border: 1px solid rgb(36, 143, 195);
 	outline: none;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 65%;
 	flex: 1 1 65%;
 	background-color: #F0F6F7;
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.email::-webkit-input-placeholder {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.email:-ms-input-placeholder {
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	font-weight: 500;
@@ -122,6 +162,8 @@ header {
 	font-size: 14px;
 	font-weight: 500;
 	text-transform: uppercase;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 35%;
 	flex: 0 1 35%;
 	text-align: center;
 	padding: 10px;
@@ -134,8 +176,14 @@ header {
 .socials {
 	min-width: 30%;
 	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -146,6 +194,7 @@ header {
 
 .fa:hover {
 	color: #555;
+	-webkit-transition: color .5s ease;
 	transition: color .5s ease
 }
 
@@ -154,16 +203,32 @@ header {
 	width: 99%;
 	z-index: -1;
 	position: relative;
+	-webkit-animation: flying 3s infinite ease-in-out alternate;
 	animation: flying 3s infinite ease-in-out alternate;
+}
+
+@-webkit-keyframes flying {
+	from {
+		left: 0;
+		-webkit-transform: skew(-5deg, -5deg);
+		transform: skew(-5deg, -5deg);
+	}
+	to {
+		left: 20px;
+		-webkit-transform: skew(5deg, 10deg);
+		transform: skew(5deg, 10deg);
+	}
 }
 
 @keyframes flying {
 	from {
 		left: 0;
+		-webkit-transform: skew(-5deg, -5deg);
 		transform: skew(-5deg, -5deg);
 	}
 	to {
 		left: 20px;
+		-webkit-transform: skew(5deg, 10deg);
 		transform: skew(5deg, 10deg);
 	}
 }
@@ -173,28 +238,41 @@ header {
 
 @media only screen and (max-width: 510px) {
 	header {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 		text-align: center;
 	}
-
 	.main-text h2 {
 		font-size: 40px;
 		letter-spacing: 5px;
 	}
-
 	.notify-form {
+		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 		width: 70%;
 		margin-bottom: 40px;
 	}
-
+	.email::-webkit-input-placeholder {
+		text-align: center;
+	}
+	.email:-ms-input-placeholder {
+		text-align: center;
+	}
 	.email::placeholder {
 		text-align: center;
 	}
-
 	footer {
 		margin: 20px auto 20px auto;
 	}
@@ -262,6 +340,7 @@ header {
 }
 
 .st6 {
+	-webkit-filter: url(#f);
 	filter: url(#f);
 }
 
@@ -270,6 +349,7 @@ header {
 }
 
 .st8 {
+	-webkit-filter: url(#d);
 	filter: url(#d);
 }
 
@@ -278,6 +358,7 @@ header {
 }
 
 .st10 {
+	-webkit-filter: url(#c);
 	filter: url(#c);
 }
 
@@ -327,6 +408,7 @@ header {
 
 .st22 {
 	opacity: 0.512;
+	-webkit-filter: url(#j);
 	filter: url(#j);
 	enable-background: new;
 }
