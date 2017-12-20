@@ -123,7 +123,6 @@ header {
 
 .email {
 	padding: 10px;
-	text-transform: uppercase;
 	border: 1px solid rgb(36, 143, 195);
 	outline: none;
 	-webkit-box-flex: 1;
@@ -133,7 +132,7 @@ header {
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	font-weight: 500;
-	color: #C0C0C0;
+	color: #555;
 }
 
 .email::-webkit-input-placeholder {
@@ -141,6 +140,7 @@ header {
 	font-size: 14px;
 	font-weight: 500;
 	color: #C0C0C0;
+	text-transform: uppercase;
 }
 
 .email:-ms-input-placeholder {
@@ -148,6 +148,7 @@ header {
 	font-size: 14px;
 	font-weight: 500;
 	color: #C0C0C0;
+	text-transform: uppercase;
 }
 
 .email::placeholder {
@@ -155,6 +156,7 @@ header {
 	font-size: 14px;
 	font-weight: 500;
 	color: #C0C0C0;
+	text-transform: uppercase;
 }
 
 .submit-btn {
@@ -185,17 +187,6 @@ header {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-}
-
-.socials .fa {
-	color: rgb(190, 190, 190);
-	font-size: 18px;
-}
-
-.fa:hover {
-	color: #555;
-	-webkit-transition: color .5s ease;
-	transition: color .5s ease
 }
 
 .saucer {
