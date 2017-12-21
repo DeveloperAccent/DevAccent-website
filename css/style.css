@@ -123,7 +123,6 @@ header {
 
 .email {
 	padding: 10px;
-	text-transform: uppercase;
 	border: 1px solid rgb(36, 143, 195);
 	outline: none;
 	-webkit-box-flex: 1;
@@ -133,7 +132,23 @@ header {
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	font-weight: 500;
+	color: #555;
+}
+
+.email::-webkit-input-placeholder {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
 	color: #C0C0C0;
+	text-transform: uppercase;
+}
+
+.email:-ms-input-placeholder {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #C0C0C0;
+	text-transform: uppercase;
 }
 
 .email::-webkit-input-placeholder {
@@ -155,6 +170,7 @@ header {
 	font-size: 14px;
 	font-weight: 500;
 	color: #C0C0C0;
+	text-transform: uppercase;
 }
 
 .submit-btn {
@@ -185,17 +201,6 @@ header {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-}
-
-.socials .fa {
-	color: rgb(190, 190, 190);
-	font-size: 18px;
-}
-
-.fa:hover {
-	color: #555;
-	-webkit-transition: color .5s ease;
-	transition: color .5s ease
 }
 
 .saucer {
@@ -301,127 +306,5 @@ header {
 
 .fila {
 	fill: #248FC3;
-	fill-rule: nonzero
-}
-
-
-/* flying saucer styles */
-
-.st0 {
-	opacity: 0.8488;
-	fill: #050B0C;
-	enable-background: new;
-}
-
-.st1 {
-	fill: #818C91;
-}
-
-.st2 {
-	opacity: 0.7423;
-	fill: #3F3C3C;
-	enable-background: new;
-}
-
-.st3 {
-	fill: #248FC3;
-}
-
-.st4 {
-	fill: #B3B3B3;
-	stroke: #000000;
-	stroke-width: 5.2894;
-}
-
-.st5 {
-	fill: #FFFFFF;
-	stroke: #000000;
-	stroke-width: 5.2894;
-}
-
-.st6 {
-	-webkit-filter: url(#f);
-	filter: url(#f);
-}
-
-.st7 {
-	fill: #FFFFFF;
-}
-
-.st8 {
-	-webkit-filter: url(#d);
-	filter: url(#d);
-}
-
-.st9 {
-	fill: #260707;
-}
-
-.st10 {
-	-webkit-filter: url(#c);
-	filter: url(#c);
-}
-
-.st11 {
-	fill: url(#SVGID_1_);
-}
-
-.st12 {
-	fill: url(#SVGID_2_);
-}
-
-.st13 {
-	fill: url(#SVGID_3_);
-}
-
-.st14 {
-	fill: url(#SVGID_4_);
-}
-
-.st15 {
-	fill: url(#SVGID_5_);
-}
-
-.st16 {
-	fill: url(#SVGID_6_);
-}
-
-.st17 {
-	fill: url(#SVGID_7_);
-}
-
-.st18 {
-	fill: url(#SVGID_8_);
-}
-
-.st19 {
-	fill: url(#SVGID_9_);
-}
-
-.st20 {
-	fill: url(#SVGID_10_);
-}
-
-.st21 {
-	fill: url(#SVGID_11_);
-}
-
-.st22 {
-	opacity: 0.512;
-	-webkit-filter: url(#j);
-	filter: url(#j);
-	enable-background: new;
-}
-
-.st23 {
-	fill: none;
-	stroke: #000000;
-}
-
-
-/* love icon styles */
-
-.colorfill {
-	fill: #990000;
-	fill-rule: nonzero
+	fill-rule: nonzero;
 }
