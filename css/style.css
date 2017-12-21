@@ -151,6 +151,20 @@ header {
 	text-transform: uppercase;
 }
 
+.email::-webkit-input-placeholder {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
+.email:-ms-input-placeholder {
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: #C0C0C0;
+}
+
 .email::placeholder {
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
@@ -292,5 +306,5 @@ header {
 
 .fila {
 	fill: #248FC3;
-	fill-rule: nonzero
+	fill-rule: nonzero;
 }
