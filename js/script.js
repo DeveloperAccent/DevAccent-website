@@ -6,7 +6,7 @@ submitLove.addEventListener('click', getSubmissionCount);
 var ajax = new XMLHttpRequest();
 ajax.onload = getSubmissionCount;
 ajax.onerror = failedAttempt;
-ajax.open("GET", "https://api.netlify.com/api/v1/forms/5a3974998c8f33460027a0e1?access_token=976354873ebb7e74404f9fabe81e493ca236627a1d95c91b92577428aee803fe", true);
+ajax.open("GET", "https://api.netlify.com/api/v1/forms/5a3e7682494c5852683421de?access_token=976354873ebb7e74404f9fabe81e493ca236627a1d95c91b92577428aee803fe", true);
 ajax.send();
 
 function getSubmissionCount() {
