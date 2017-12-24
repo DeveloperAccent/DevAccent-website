@@ -10,15 +10,15 @@ ajax.onerror = failedAttempt;
 ajax.open("GET", "https://api.netlify.com/api/v1/forms/5a3e7682494c5852683421de?access_token=976354873ebb7e74404f9fabe81e493ca236627a1d95c91b92577428aee803fe", true);
 ajax.send();
 
-function sendForm(e) {
-	e.preventDefault();
-		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
-		const url = showLoveForm.getAttribute('action');
-		ajax.open('POST', 'url', true);
-		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.send(null);
-		console.log("sendForm" + this);
-}
+// function sendForm(e) {
+// 	e.preventDefault();
+// 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
+// 		const url = showLoveForm.getAttribute('action');
+// 		ajax.open('POST', 'url', true);
+// 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+// 		ajax.send(null);
+// 		console.log("sendForm" + this);
+// }
 
 function getSubmissionCount() {
 	console.log("getSub" + this);
