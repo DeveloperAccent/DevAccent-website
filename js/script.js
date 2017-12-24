@@ -2,7 +2,7 @@ const loveCount = document.querySelector('.love-count');
 const submitLove = document.querySelector('.send-love-btn');
 const showLoveForm = document.querySelector('.show-love-form');
 
-submitLove.addEventListener('click', submitForm);
+submitLove.addEventListener('click', sendForm);
 
 var ajax = new XMLHttpRequest();
 ajax.onload = getSubmissionCount;
@@ -10,20 +10,18 @@ ajax.onerror = failedAttempt;
 ajax.open("GET", "https://api.netlify.com/api/v1/forms/5a3e7682494c5852683421de?access_token=976354873ebb7e74404f9fabe81e493ca236627a1d95c91b92577428aee803fe", true);
 ajax.send();
 
-function submitForm(e) {
+function sendForm(e) {
 	e.preventDefault();
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
 		ajax.open('POST', 'url', true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.onreadystatechange = function() {//Call a function when the state changes.
-			if(ajax.readyState == 4 && ajax.status == 200) {
-					alert(ajax.responseText);
-			}}
-		ajax.send();
+		ajax.send(null);
+		console.log("sendForm" + this);
 }
 
 function getSubmissionCount() {
+	console.log("getSub" + this);
 	if (this.status == 200) { // request succeeded
 		// do something with this.responseText;
 		var json = JSON.parse(this.responseText);
