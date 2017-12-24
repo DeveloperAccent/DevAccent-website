@@ -10,9 +10,9 @@ ajax.onerror = failedAttempt;
 ajax.open("GET", "https://api.netlify.com/api/v1/forms/5a3e7682494c5852683421de?access_token=976354873ebb7e74404f9fabe81e493ca236627a1d95c91b92577428aee803fe", true);
 ajax.send();
 
-function sendForm() {
-	showLoveForm.submit(function(e) {
-		e.preventDefault();
+function sendForm(e) {
+	e.preventDefault();
+	showLoveForm.submit(function() {
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
 		ajax.open('POST', 'url', true);
