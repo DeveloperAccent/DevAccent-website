@@ -17,7 +17,7 @@ function submitForm(e) {
 		const url = showLoveForm.getAttribute('action');
 		ajax.open('POST', 'url', true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.send("love");
+		ajax.send();
 }
 
 function getSubmissionCount() {
