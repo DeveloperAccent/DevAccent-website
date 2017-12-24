@@ -14,9 +14,9 @@ function submitForm(e) {
 	e.preventDefault();
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
-		ajax.open('GET', 'url', true);
+		ajax.open('POST', 'url', true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.onreadystatechange = getSubmissionCount();
+		ajax.onreadystatechange = loveCount.innerText = subCount;
 		ajax.send();
 }
 
