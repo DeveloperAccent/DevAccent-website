@@ -15,7 +15,7 @@ function submitForm(e) {
 	showLoveForm.submit(function() {
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
-		ajax.open('GET', 'url', true);
+		ajax.open('POST', 'url', true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 		ajax.send();
 	})
