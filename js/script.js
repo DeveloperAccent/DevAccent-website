@@ -16,7 +16,7 @@ function sendForm(e) {
 
 	const xhr = new XMLHttpRequest();
 	const FD = new FormData();
-	showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
+	// showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 	const url = showLoveForm.getAttribute('action');
 
 	xhr.addEventListener('load', function (event) {
@@ -28,7 +28,7 @@ function sendForm(e) {
 		alert('Oups! Something went wrong.');
 	});
 
-	xhr.open('POST', 'index.html', true);
+	xhr.open('POST', url, true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 	xhr.send(FD);
 }
