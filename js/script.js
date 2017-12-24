@@ -3,7 +3,7 @@ const submitLove = document.querySelector('.send-love-btn');
 const showLoveForm = document.querySelector('.show-love-form');
 
 submitLove.addEventListener('click', sendForm);
-submitLove.addEventListener('submit', submitFunc);
+// submitLove.addEventListener('submit', submitFunc);
 
 var ajax = new XMLHttpRequest();
 ajax.onload = getSubmissionCount;
@@ -15,16 +15,27 @@ function sendForm(e) {
 	e.preventDefault();
 
 	const xhr = new XMLHttpRequest();
+	const FD = new FormData();
 	showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 	const url = showLoveForm.getAttribute('action');
-	xhr.open('POST', 'index.html', true);
+
+	xhr.addEventListener('load', function (event) {
+		alert('Yeah! Data sent and response loaded.');
+	});
+
+	// Define what happens in case of error
+	xhr.addEventListener('error', function (event) {
+		alert('Oups! Something went wrong.');
+	});
+
+	xhr.open('POST', url, true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-	xhr.send('email=love');
+	xhr.send(FD);
 }
 
-function submitFunc() {
-	alert("Submitted!");
-}
+// function submitFunc() {
+// 	alert("Submitted!");
+// }
 
 function getSubmissionCount() {
 	if (this.status == 200) { // request succeeded
