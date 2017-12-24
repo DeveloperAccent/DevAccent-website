@@ -28,9 +28,9 @@ function sendForm(e) {
 		alert('Oups! Something went wrong.');
 	});
 
-	xhr.open('GET', 'index', true);
+	xhr.open('POST', 'index', true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-	xhr.send();
+	xhr.send(FD);
 }
 
 // function submitFunc() {
