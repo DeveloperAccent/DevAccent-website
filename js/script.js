@@ -12,11 +12,13 @@ ajax.send();
 
 function sendForm(e) {
 	e.preventDefault();
-		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
-		const url = showLoveForm.getAttribute('action');
-		ajax.open('GET', 'index', true);
-		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.send(null);
+
+	const xhr = new XMLHttpRequest();
+	showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
+	const url = showLoveForm.getAttribute('action');
+	xhr.open('POST', url, true);
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+	xhr.send(null);
 }
 
 function getSubmissionCount() {
