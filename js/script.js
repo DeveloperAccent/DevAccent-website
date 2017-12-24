@@ -20,9 +20,9 @@ function sendForm(e) {
 }
 
 function getSubmissionCount() {
-	if (ajax.status == 200) { // request succeeded
+	if (this.status == 200) { // request succeeded
 		// do something with this.responseText;
-		var json = JSON.parse(ajax.responseText);
+		var json = JSON.parse(this.responseText);
 		var subCount = json.submission_count;
 		loveCount.innerText = subCount;
 	} else {
