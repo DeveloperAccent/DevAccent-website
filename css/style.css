@@ -119,7 +119,7 @@ header {
 	cursor: pointer;
 }
 
-.show-love {
+.show-love, .show-love-form {
 	display: flex;
 	align-items: center;
 }
