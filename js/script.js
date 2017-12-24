@@ -12,20 +12,17 @@ ajax.send();
 
 function sendForm(e) {
 	e.preventDefault();
-	showLoveForm.submit(function() {
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
-		ajax.open('POST', 'url', true);
+		ajax.open('POST', url, true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.send();
-	})
+		ajax.send('');
 }
 
 function getSubmissionCount() {
-	console.log("getSub" + this);
-	if (this.status == 200) { // request succeeded
+	if (ajax.status == 200) { // request succeeded
 		// do something with this.responseText;
-		var json = JSON.parse(this.responseText);
+		var json = JSON.parse(ajax.responseText);
 		var subCount = json.submission_count;
 		loveCount.innerText = subCount;
 	} else {
