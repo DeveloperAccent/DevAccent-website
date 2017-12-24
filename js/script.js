@@ -16,7 +16,7 @@ function sendForm(e) {
 	const xhr = new XMLHttpRequest();
 	showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 	const url = showLoveForm.getAttribute('action');
-	xhr.open('GET', url, true);
+	xhr.open('GET', 'index', true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 	xhr.send();
 }
