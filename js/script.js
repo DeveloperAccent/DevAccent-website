@@ -2,7 +2,7 @@ const loveCount = document.querySelector('.love-count');
 const submitLove = document.querySelector('.send-love-btn');
 const showLoveForm = document.querySelector('.show-love-form');
 
-submitLove.addEventListener('click', sendForm);
+// submitLove.addEventListener('click', sendForm);
 
 var ajax = new XMLHttpRequest();
 ajax.onload = getSubmissionCount;
