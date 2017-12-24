@@ -16,7 +16,10 @@ function submitForm(e) {
 		const url = showLoveForm.getAttribute('action');
 		ajax.open('POST', 'url', true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.onreadystatechange = loveCount.innerText = subCount;
+		ajax.onreadystatechange = function() {//Call a function when the state changes.
+			if(http.readyState == 4 && http.status == 200) {
+					alert(http.responseText);
+			}
 		ajax.send();
 }
 
