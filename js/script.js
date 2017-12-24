@@ -22,9 +22,9 @@ ajax.send();
 
 function getSubmissionCount() {
 	console.log("getSub" + this);
-	if (this.status == 200) { // request succeeded
+	if (XMLHttpRequest.status == 200) { // request succeeded
 		// do something with this.responseText;
-		var json = JSON.parse(this.responseText);
+		var json = JSON.parse(XMLHttpRequest.responseText);
 		var subCount = json.submission_count;
 		loveCount.innerText = subCount;
 	} else {
