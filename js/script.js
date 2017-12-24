@@ -3,6 +3,7 @@ const submitLove = document.querySelector('.send-love-btn');
 const showLoveForm = document.querySelector('.show-love-form');
 
 submitLove.addEventListener('click', sendForm);
+submitLove.addEventListener('submit', submitFunc);
 
 var ajax = new XMLHttpRequest();
 ajax.onload = getSubmissionCount;
@@ -18,7 +19,11 @@ function sendForm(e) {
 	const url = showLoveForm.getAttribute('action');
 	xhr.open('POST', 'index', true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-	xhr.send();
+	xhr.send(null);
+}
+
+function submitFunc() {
+	alert("Submitted!");
 }
 
 function getSubmissionCount() {
