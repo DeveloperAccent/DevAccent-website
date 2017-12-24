@@ -11,15 +11,13 @@ ajax.open("GET", "https://api.netlify.com/api/v1/forms/5a3e7682494c5852683421de?
 ajax.send();
 
 
-function submitForm() {
-	showLoveForm.submit(function(e) {
+function submitForm(e) {
 		e.preventDefault();
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
 		ajax.open('POST', 'url', true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 		ajax.send("love");
-	});
 }
 
 function getSubmissionCount() {
