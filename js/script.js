@@ -28,7 +28,7 @@ function sendForm(e) {
 		alert('Oups! Something went wrong.');
 	});
 
-	xhr.open('POST', url, true);
+	xhr.open('POST', 'index.html', true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 	xhr.send(FD);
 }
