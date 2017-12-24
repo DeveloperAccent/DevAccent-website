@@ -11,7 +11,7 @@ ajax.open("GET", "https://api.netlify.com/api/v1/forms/5a3e7682494c5852683421de?
 ajax.send();
 
 function submitForm() {
-	this.submit(function(e) {
+	showLoveForm.submit(function(e) {
 		e.preventDefault();
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
