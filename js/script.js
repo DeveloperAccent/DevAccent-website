@@ -14,9 +14,9 @@ function sendForm(e) {
 	e.preventDefault();
 		showLoveForm.innerHTML += "<input type='hidden' name='form-name' value='love' />";
 		const url = showLoveForm.getAttribute('action');
-		ajax.open('POST', 'index.html', true);
+		ajax.open('GET', 'index', true);
 		ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		ajax.send('email=love');
+		ajax.send(null);
 }
 
 function getSubmissionCount() {
