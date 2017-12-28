@@ -26,6 +26,10 @@ a {
 	text-decoration: none;
 }
 
+.hide {
+	display: none;
+}
+
 header {
 	margin: 30px 50px;
 	display: -webkit-box;
@@ -92,23 +96,55 @@ header {
 	letter-spacing: 5px;
 }
 
+.main .notify-form {
+	margin: 0 auto;
+}
+
 .footer {
-	width: 100%;
+	width: 60%;
 	height: auto;
 	margin: 50px auto 20px auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
+	justify-content: space-between;
 	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
+}
+
+.love-svg {
+	width: 30px;
+	height: 30px;
+}
+
+.show-love .send-love-btn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.show-love,
+.show-love-form {
+	display: flex;
+	align-items: center;
+}
+
+.show-love p {
+	font-size: 14px;
+	margin-right: 10px;
+	font-family: rubik, sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #248FC3;
+}
+
+.love-count {
+	font-size: 14px;
+	font-size: 14px;
+	margin-left: 10px;
+	font-family: rubik, sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #248FC3;
 }
 
 .notify-form {
@@ -187,11 +223,11 @@ header {
 	outline: none;
 	border: 1px solid rgb(36, 143, 195);
 	color: #fff;
+	cursor: pointer;
 }
 
 .socials {
-	min-width: 30%;
-	margin: 0 auto;
+	min-width: 20%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -201,6 +237,19 @@ header {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+}
+
+.socials svg {
+	width: 18px;
+	height: 18px;
+	fill: #c0c0c0;
+	fill-rule: nonzero;
+	transition: all .5s ease;
+}
+
+.socials svg:hover {
+	fill: #555;
+	fill-rule: nonzero;
 }
 
 .saucer {
@@ -238,7 +287,6 @@ header {
 	}
 }
 
-
 /* Media Queries */
 
 @media only screen and (max-width: 510px) {
@@ -254,6 +302,10 @@ header {
 		-ms-flex-align: center;
 		align-items: center;
 		text-align: center;
+	}
+	.main figure {
+		margin: 10px auto 0 auto;
+		height: 20vh;
 	}
 	.main-text h2 {
 		font-size: 40px;
@@ -278,33 +330,19 @@ header {
 	.email::placeholder {
 		text-align: center;
 	}
-	footer {
-		margin: 20px auto 20px auto;
+	.footer {
+		margin: 50px auto 20px auto;
+		flex-direction: column;
 	}
-}
-
-
-/* svg styles */
-
-
-/* devaccent logo styles */
-
-.str0 {
-	stroke: black;
-	stroke-width: 8.56881
-}
-
-.filc {
-	fill: none;
-	fill-rule: nonzero
-}
-
-.filb {
-	fill: black;
-	fill-rule: nonzero
-}
-
-.fila {
-	fill: #248FC3;
-	fill-rule: nonzero;
+	.show-love {
+		margin: 10px auto;
+		flex-direction: column;
+	}
+	.socials {
+		min-width: 60%;
+		margin-top: 10px;
+	}
+	.show-love span {
+		margin-right: 0px;
+	}
 }
