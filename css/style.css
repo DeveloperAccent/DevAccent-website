@@ -26,6 +26,10 @@ a {
 	text-decoration: none;
 }
 
+.hide {
+	display: none;
+}
+
 header {
 	margin: 30px 50px;
 	display: -webkit-box;
@@ -105,7 +109,6 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* border: 1px solid red; */
 }
 
 .love-svg {
@@ -113,13 +116,14 @@ header {
 	height: 30px;
 }
 
-.show-love button {
+.show-love .send-love-btn {
 	background: transparent;
 	border: none;
 	cursor: pointer;
 }
 
-.show-love, .show-love-form {
+.show-love,
+.show-love-form {
 	display: flex;
 	align-items: center;
 }
@@ -219,6 +223,7 @@ header {
 	outline: none;
 	border: 1px solid rgb(36, 143, 195);
 	color: #fff;
+	cursor: pointer;
 }
 
 .socials {
@@ -232,6 +237,19 @@ header {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+}
+
+.socials svg {
+	width: 18px;
+	height: 18px;
+	fill: #c0c0c0;
+	fill-rule: nonzero;
+	transition: all .5s ease;
+}
+
+.socials svg:hover {
+	fill: #555;
+	fill-rule: nonzero;
 }
 
 .saucer {
@@ -268,7 +286,6 @@ header {
 		transform: skew(5deg, 10deg);
 	}
 }
-
 
 /* Media Queries */
 
@@ -328,30 +345,4 @@ header {
 	.show-love span {
 		margin-right: 0px;
 	}
-}
-
-
-/* svg styles */
-
-
-/* devaccent logo styles */
-
-.str0 {
-	stroke: black;
-	stroke-width: 8.56881
-}
-
-.filc {
-	fill: none;
-	fill-rule: nonzero
-}
-
-.filb {
-	fill: black;
-	fill-rule: nonzero
-}
-
-.fila {
-	fill: #248FC3;
-	fill-rule: nonzero;
 }
