@@ -17,9 +17,9 @@ function sendLove(e) {
 	e.preventDefault();
 	var number;
 	var url = showLoveForm.getAttribute('action');
-	xhr.open("POST", url, true);
+	xhr.open("GET", url, true);
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-	xhr.send(number);
+	xhr.send();
 
 	getSubmissionCount();
 }
