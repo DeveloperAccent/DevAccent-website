@@ -1,2 +1,2 @@
 # DevAccent-website
-Source code for Developer Accent Website
+Source code for Developer Website

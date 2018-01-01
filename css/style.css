@@ -7,11 +7,6 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
-	height: 100%;
-}
-
 body {
 	font-family: 'Rubik', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -21,13 +16,6 @@ body {
 }
 
 .container {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
 	margin: 0 auto;
 	max-width: 1300px;
 	width: 90%;
@@ -44,7 +32,7 @@ a {
 
 header {
 	margin: 30px 50px;
-	/* display: -webkit-box;
+	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
@@ -54,7 +42,7 @@ header {
 	-ms-flex-align: center;
 	align-items: center;
 	-ms-flex-wrap: wrap;
-	flex-wrap: wrap; */
+	flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -76,8 +64,8 @@ header {
 	text-transform: uppercase;
 }
 
-.main .saucer-zone {
-	margin: 0 auto 0 auto;
+.main figure {
+	margin: 50px auto 0 auto;
 	height: 26vh;
 	width: 60%;
 }
@@ -118,12 +106,8 @@ header {
 	margin: 50px auto 20px auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
-	/* display: flex; */
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
+	display: flex;
 	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -140,11 +124,7 @@ header {
 
 .show-love,
 .show-love-form {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -246,7 +226,7 @@ header {
 	cursor: pointer;
 }
 
-/* .socials {
+.socials {
 	min-width: 20%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -257,14 +237,13 @@ header {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-} */
+}
 
 .socials svg {
 	width: 18px;
 	height: 18px;
 	fill: #c0c0c0;
 	fill-rule: nonzero;
-	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
@@ -308,14 +287,6 @@ header {
 	}
 }
 
-
-/* Contact Page Styles */
-
-.contact-container {
-	background: red;
-}
-
-
 /* Media Queries */
 
 @media only screen and (max-width: 510px) {
@@ -332,7 +303,7 @@ header {
 		align-items: center;
 		text-align: center;
 	}
-	.main .saucer-zone {
+	.main figure {
 		margin: 10px auto 0 auto;
 		height: 20vh;
 	}
@@ -361,22 +332,16 @@ header {
 	}
 	.footer {
 		margin: 50px auto 20px auto;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 	.show-love {
 		margin: 10px auto;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
 		flex-direction: column;
 	}
-	/* .socials {
+	.socials {
 		min-width: 60%;
 		margin-top: 10px;
-	} */
+	}
 	.show-love span {
 		margin-right: 0px;
 	}
